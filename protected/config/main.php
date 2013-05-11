@@ -20,9 +20,39 @@ return array(
 	),
 
 	'modules'=>array(
-                'user'=>array(
-                    'debug'=>true,
-                ),
+            'user' => array(
+                'debug' => false,
+                'userTable' => 'user',
+                'translationTable' => 'translation',
+            ),
+            'usergroup' => array(
+                'usergroupTable' => 'usergroup',
+                'usergroupMessageTable' => 'user_group_message',
+            ),
+            'membership' => array(
+                'membershipTable' => 'membership',
+                'paymentTable' => 'payment',
+            ),
+            'friendship' => array(
+                'friendshipTable' => 'friendship',
+            ),
+            'profile' => array(
+                'privacySettingTable' => 'privacysetting',
+                'profileFieldTable' => 'profile_field',
+                'profileTable' => 'profile',
+                'profileCommentTable' => 'profile_comment',
+                'profileVisitTable' => 'profile_visit',
+            ),
+            'role' => array(
+                'roleTable' => 'role',
+                'userRoleTable' => 'user_role',
+                'actionTable' => 'action',
+                'permissionTable' => 'permission',
+            ),
+            'message' => array(
+                'messageTable' => 'message',
+            ),
+                
 		// uncomment the following to enable the Gii tool
 		
 		'gii'=>array(
@@ -42,6 +72,7 @@ return array(
                         'class'=>'application.modules.user.components.YumWebUser',
                         'loginUrl' => array('//user/user/login'),
 		),
+                'cache' => array('class' => 'system.caching.CDummyCache'),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
