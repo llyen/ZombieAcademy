@@ -227,3 +227,6 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+/* -- */
+.wrapper { width: 980px; padding-top: 40px /*70px*/; margin: 0 auto; }
